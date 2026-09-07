@@ -110,9 +110,6 @@ export default {
                     )
                     .setFooter({ text: 'Tip: Use /greet dashboard to customize welcome settings' });
 
-                if (image) {
-                    embed.setImage(image);
-                }
 
                 await InteractionHelper.safeEditReply(interaction, { embeds: [embed] });
             } catch (error) {
