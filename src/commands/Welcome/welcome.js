@@ -110,7 +110,9 @@ export default {
                     )
                     .setFooter({ text: 'Tip: Use /greet dashboard to customize welcome settings' });
 
-
+                if (image) {
+                    embed.setImage(image);
+                }
                 await InteractionHelper.safeEditReply(interaction, { embeds: [embed] });
             } catch (error) {
                 logger.error(`[Welcome] Failed to setup welcome system for guild ${guild.id}:`, error);
